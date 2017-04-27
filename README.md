@@ -1,5 +1,5 @@
 # GoCD Server
-GoCD Server based on Java 8 and alpine, with pre installed yaml config.
+GoCD Server based on alpine, with pre installed yaml config.
 
 #### Inspired by
 https://github.com/gocd/docker-gocd-server
