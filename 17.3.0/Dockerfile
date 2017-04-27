@@ -1,4 +1,4 @@
-FROM stakater/java8-alpine:1.8.0_121
+FROM stakater/base-alpine:3.5
 LABEL authors="Hazim <hazim_malik@hotmail.com>"
 
 ARG GOCD_VERSION="17.3.0"
@@ -27,7 +27,7 @@ RUN \
   adduser -D -u ${UID} -G go go && \
 # install dependencies and other helpful CLI tools
   apk --update-cache upgrade && \
-  apk add --update-cache git mercurial subversion tini openssh-client su-exec && \
+  apk add --update-cache openjdk8-jre-base git mercurial subversion tini openssh-client su-exec && \
 # unzip the zip file into /go-server, after stripping the first path prefix
   unzip /tmp/go-server.zip -d / && \
   rm /tmp/go-server.zip && \
